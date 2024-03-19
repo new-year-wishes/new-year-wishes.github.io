@@ -161,8 +161,8 @@ Carroussel css
 }
 
 .carousel-indicators li, .carousel-indicators li.active {
-    width: 60px !important;
-    height: 60px !important;
+    width: 55px !important;
+    height: 55px !important;
     background-color: #fff;
     position: relative;
     margin: 0px;

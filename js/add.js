@@ -5,7 +5,6 @@ $(document).ready(function () {
     if (!$("input#image")[0].files?.length) {
       formData.delete("image");
     }
-    console.log(...formData);
     $.ajax({
       method: "post",
       processData: false,
@@ -15,8 +14,11 @@ $(document).ready(function () {
       enctype: "multipart/form-data",
       url: "https://iutcessa-new-year-15.onrender.com/submit/",
       success: function (response) {
-        console.log(response);
+       alert("ثبت شد")
       },
+      error: function (err) {
+        alert("خطا")
+       },
     });
   });
 });

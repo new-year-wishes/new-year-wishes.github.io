@@ -13,7 +13,38 @@ function launchCarousel() {
 $(document).ready(function () {
   launchCarousel();
   $.get("https://iutcessa-new-year-15.onrender.com/get/", function(data, status){
-    console.log(data,status);
+  if(data && data.length){
+    data.forEach(function (nous, i) {
+        document.getElementById("carousel-indicators").innerHTML += `
+                  <li data-target="#quote-carousel" data-slide-to="${i}" class="${isActive(
+          i
+        )}" title="${checkName(nous.name)}">
+                    <img src="${checkImage(nous.image)}" alt="">
+                  </li>`;
+    
+        document.getElementById("name").innerHTML += `
+                <div class="item ${isActive(i)}">
+                   <blockquote>
+                      <div class="row">
+                           <div class="col-sm-3 text-center">
+                               <img class="img-circle" src="${checkImage(
+                                 nous.image
+                               )}" style="width: 100px;height:100px;">
+                           </div>
+                            <div class="col-sm-9">
+                                <p style="padding-right:20px">${formatMessage(nous.message)}</p>
+                                <div class="row">
+                                    <small>
+                                        ${checkName(nous.name)}
+                                   
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                   </blockquote>
+                </div>`;
+      });
+  }
   });
 });
 
@@ -91,8 +122,8 @@ function isActive(i) {
  */
 function checkImage(image) {
   return (
-    image ??
-    "https://i.pinimg.com/originals/93/d3/e3/93d3e31639a4d07613de9dccdc8bd5e8.png"
+    image ? `https://${image}` :
+    "images/person.png"
   );
 }
 
@@ -128,43 +159,3 @@ function getFlag(nous) {
   return nous.flag ?? "mg";
 }
 
-// Fetch json file
-
-
-$.getJSON("USER.json", function (elements) {
-  elements.forEach(function (nous, i) {
-    document.getElementById("carousel-indicators").innerHTML += `
-              <li data-target="#quote-carousel" data-slide-to="${i}" class="${isActive(
-      i
-    )}" title="${checkName(nous.name)}">
-                <img src="${checkImage(nous.image)}" alt="">
-              </li>`;
-
-    document.getElementById("name").innerHTML += `
-            <div class="item ${isActive(i)}">
-               <blockquote>
-                  <div class="row">
-                       <div class="col-sm-3 text-center">
-                           <img class="img-circle" src="${checkImage(
-                             nous.image
-                           )}" style="width: 100px;height:100px;">
-                       </div>
-                        <div class="col-sm-9">
-                            <p style="padding-right:20px">${formatMessage(nous.message)}</p>
-                            <div class="row">
-                                <small>
-                                    ${checkName(nous.name)}
-                                    <a href="${checkGithub(
-                                      nous.username
-                                    )}" target="_blank" 
-                                    style="color: #f9f9f9;margin: 5px">
-                                  
-                                    </a>
-                                </small>
-                            </div>
-                        </div>
-                    </div>
-               </blockquote>
-            </div>`;
-  });
-});
