@@ -6,7 +6,7 @@
 function launchCarousel() {
   $("#quote-carousel").carousel({
     pause: true,
-    interval: 4000,
+    interval: 5000,
   });
 }
 
@@ -31,8 +31,8 @@ $(document).ready(function () {
                                  nous.image
                                )}" style="width: 100px;height:100px;">
                            </div>
-                            <div class="col-sm-9">
-                                <p style="padding-right:20px">${formatMessage(nous.message)}</p>
+                            <div class="col-sm-9" style="height:250px;overflow-y:auto">
+                                <p style="padding-right:20px;">${formatMessage(nous.message)}</p>
                                 <div class="row">
                                     <small>
                                         ${checkName(nous.name)}
@@ -99,7 +99,7 @@ document.title += ` | ${gasyYear}`;
  * @returns {string}
  */
 function formatMessage(message) {
-  return message? message.slice(0, 400) : "پیام";
+  return message? message.slice(0, 10_000) : "پیام";
 }
 
 /**

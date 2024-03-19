@@ -9,26 +9,29 @@
 body {
     background: #000 !important;
     margin: 0;
-    overflow: hidden !important;
-
     direction: rtl; 
+    overflow: hidden !important;
 }
 
 canvas {
     cursor: crosshair;
     display: block;
 }
+.github-link span{
+    font-size: 18px !important;
+  }
 
 .text {
     color: white;
     position: absolute;
     top: calc(50%);
-    transform: translateY(calc(-50% - 50px));
+    transform: translateY(calc(-50%));
     text-align: center;
     display: block;
     width: 100%;
     font-size: 1.5rem;
     font-family: "Vazirmatn", sans-serif;
+  
 
 
 }
@@ -144,7 +147,7 @@ Carroussel css
 .gasy-content {
     width: 100% !important;
     height: 100% !important;
-    overflow-y: hidden;
+    overflow-y: hidden ;
     overflow-x: hidden !important;
 }
 

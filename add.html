@@ -1,49 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
-
-    <link rel="stylesheet" href="css/add.css">
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="css/font-awesome-4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"
+    />
+    <link rel="stylesheet" href="css/add.css" />
+  </head>
+  <body>
     <a class="github-link" href="index.html">
-        <span>مشاهده آرزوها</span>
-        <i class="fa fa-link"></i>
+      <span>مشاهده آرزوها</span>
+      <i class="fa fa-link"></i>
     </a>
     <div class="login-box">
-        <h2>افزودن آرزو</h2>
-        <form id="form">
-          <div class="user-box">
-            <input type="text" name="name" id="name" required="">
-            <label>نام</label>
-          </div>
-          <div class="user-box">
-            <input type="text" name="code" id="code" required="">
-            <label>شماره دانشجویی</label>
-          </div>
-        
-          <div class="user-box">
-           <textarea name="message" id="message" rows="7" required></textarea>
-            <label>پیام</label>
-          </div>
-          <div class="user-box" style="margin-top: 20px;">
-            <input type="file" name="image" id="image">
-            <label class="lbl">عکس (اختیاری)</label>
-          </div>
-          <button type="submit">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            ثبت آرزو
-          </button>
-        </form>
-      </div>
-<script src="js/jquery-3.3.1.min.js"></script>
+      <h2>افزودن آرزو</h2>
+      <form id="form">
+        <div class="user-box">
+          <input type="text" name="name" id="name" required="" />
+          <label>نام</label>
+        </div>
+        <div class="user-box">
+          <input type="text" name="code" id="code" required="" />
+          <label>شماره دانشجویی</label>
+        </div>
 
-      <script src="js/add.js"></script>
-</body>
+        <div class="user-box">
+          <textarea name="message" id="message" rows="7" required></textarea>
+          <label>پیام</label>
+        </div>
+        <div class="user-box" style="margin-top: 20px">
+          <input type="file" name="image" id="image" />
+          <label class="lbl">عکس (اختیاری)</label>
+        </div>
+        <button type="submit">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          ثبت آرزو
+        </button>
+      </form>
+    </div>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+    <script src="js/add.js"></script>
+  </body>
 </html>
