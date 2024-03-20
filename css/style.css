@@ -1,43 +1,41 @@
 /* basic styles for black background and crosshair cursor */
-@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap');
-*{
-    font-family: "Vazirmatn", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
+@import url("https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap");
+* {
+  font-family: "Vazirmatn", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 body {
-    background: #000 !important;
-    margin: 0;
-    direction: rtl; 
-    overflow: hidden !important;
+  background: #000 !important;
+  margin: 0;
+  direction: rtl;
+  overflow-x: hidden !important;
+  padding-bottom:  50px !important;
 }
 
 canvas {
-    cursor: crosshair;
-    display: block;
+  cursor: crosshair;
+  display: block;
 }
-.github-link span{
-    font-size: 18px !important;
-  }
+.github-link span {
+  font-size: 18px !important;
+}
 
 .text {
-    color: white;
-    position: absolute;
-    top: calc(50%);
-    transform: translateY(calc(-50%));
-    text-align: center;
-    display: block;
-    width: 100%;
-    font-size: 1.5rem;
-    font-family: "Vazirmatn", sans-serif;
-  
-
-
+  color: white;
+  position: absolute;
+  top: calc(50%);
+  transform: translateY(calc(-50%));
+  text-align: center;
+  display: block;
+  width: 100%;
+  font-size: 1.5rem;
+  font-family: "Vazirmatn", sans-serif;
 }
 
 #year {
-    color: rgba(211, 136, 23, 0.678);
+  color: rgba(211, 136, 23, 0.678);
 }
 
 /**
@@ -45,69 +43,69 @@ Carroussel css
  */
 /* carousel */
 #quote-carousel {
-    padding: 0 10px 30px 10px;
-    margin-top: 30px;
+  padding: 0 10px 30px 10px;
+  margin-top: 30px;
 }
 
 /* Control buttons  */
 #quote-carousel .carousel-control {
-    background: none;
-    color: #222;
-    font-size: 2.3em;
-    text-shadow: none;
-    margin-top: 30px;
+  background: none;
+  color: #222;
+  font-size: 2.3em;
+  text-shadow: none;
+  margin-top: 30px;
 }
 
 /* Previous button  */
 #quote-carousel .carousel-control.left {
-    left: -12px;
+  left: -12px;
 }
 
 /* Next button  */
 #quote-carousel .carousel-control.right {
-    right: -12px !important;
+  right: -12px !important;
 }
 
 /* Changes the position of the indicators */
 #quote-carousel .carousel-indicators {
-    right: 50%;
-    top: 100%;
-    transform: translateX(50%);
-
+  right: 50%;
+  top: 100%;
+  transform: translateX(50%);
+  width: 100% !important;
+  padding: 0 !important;
 }
 
 /* Changes the color of the indicators */
 #quote-carousel .carousel-indicators li {
-    background: #c0c0c0;
+  background: #c0c0c0;
 }
 
 #quote-carousel .carousel-indicators .active {
-    background: #333333;
+  background: #333333;
 }
 
 #quote-carousel img {
-    /*width: 250px;*/
-    /*height: 100px*/
+  /*width: 250px;*/
+  /*height: 100px*/
 }
 
 /* End carousel */
 
 .item blockquote {
-    border-left: none;
-    margin: 0;
+  border-left: none;
+  margin: 0;
 }
 
 .item blockquote img {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .item blockquote p:before {
-    content: "\f10d";
-    font-family: 'Fontawesome';
-    float: left;
-    margin-right: 10px;
+  content: "\f10d";
+  font-family: "Fontawesome";
+  float: left;
+  margin-right: 10px;
 }
-
 
 /**
   MEDIA QUERIES
@@ -115,93 +113,93 @@ Carroussel css
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-    #quote-carousel {
-        margin-bottom: 0;
-        padding: 0 40px 30px 40px;
-    }
-
+  #quote-carousel {
+    margin-bottom: 0;
+    padding: 0 40px 30px 40px;
+  }
 }
 
 /* Small devices (tablets, up to 768px) */
 @media (max-width: 768px) {
+  /* Make the indicators larger for easier clicking with fingers/thumb on mobile */
+  #quote-carousel .carousel-indicators {
+    bottom: -20px !important;
+  }
 
-    /* Make the indicators larger for easier clicking with fingers/thumb on mobile */
-    #quote-carousel .carousel-indicators {
-        bottom: -20px !important;
-    }
+  #quote-carousel .carousel-indicators li {
+    display: inline-block;
+    margin: 0px 5px;
+    width: 15px;
+    height: 15px;
+  }
 
-    #quote-carousel .carousel-indicators li {
-        display: inline-block;
-        margin: 0px 5px;
-        width: 15px;
-        height: 15px;
-    }
-
-    #quote-carousel .carousel-indicators li.active {
-        margin: 0px 5px;
-        width: 20px;
-        height: 20px;
-    }
+  #quote-carousel .carousel-indicators li.active {
+    margin: 0px 5px;
+    width: 20px;
+    height: 20px;
+  }
 }
 
 .gasy-content {
-    width: 100% !important;
-    height: 100% !important;
-    overflow-y: hidden ;
-    overflow-x: hidden !important;
+  width: 100% !important;
+  height: 100% !important;
+  overflow-y: hidden !important;
+  overflow-x: hidden !important;
 }
 
 .carousel-indicators {
-    list-style: none;
+  list-style: none;
 }
 
-.carousel-indicators li, .carousel-indicators li.active {
-    transition: 1s;
+.carousel-indicators li,
+.carousel-indicators li.active {
+  transition: 1s;
 }
 
-.carousel-indicators li, .carousel-indicators li.active {
-    -webkit-backface-visibility: hidden;
+.carousel-indicators li,
+.carousel-indicators li.active {
+  -webkit-backface-visibility: hidden;
 }
 
-.carousel-indicators li, .carousel-indicators li.active {
-    width: 55px !important;
-    height: 55px !important;
-    background-color: #fff;
-    position: relative;
-    margin: 0px;
-    border-radius: 50%;
+.carousel-indicators li,
+.carousel-indicators li.active {
+  width: 55px !important;
+  height: 55px !important;
+  background-color: #fff;
+  position: relative;
+  margin: 0px;
+  border-radius: 50%;
 }
-.carousel-indicators li, .carousel-indicators li {
-    width: 25px !important;
-    height: 25px !important;
-    border-radius: 50% !important;
-
-
+.carousel-indicators li,
+.carousel-indicators li {
+  width: 25px !important;
+  height: 25px !important;
+  border-radius: 50% !important;
 }
 
 .carousel-indicators img {
-    position: absolute;
-    width: 100%;
-    border-radius: 50%;
-    height: 100%;
-    top: 0;
-    left: 0;
+  position: absolute;
+  width: 100%;
+  border-radius: 50%;
+  height: 100%;
+  top: 0;
+  left: 0;
 }
 
-.github-link{
-    color: white;
-    right: 20px;
-    position: absolute;
-    top: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.github-link {
+  color: white;
+  right: 20px;
+  position: absolute;
+  top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.github-link:hover{
-    color: white;
+.github-link:hover {
+  color: white;
 }
 
 .github-link > i {
-    margin-right: 5px;
+  margin-right: 5px;
 }
