@@ -18,7 +18,7 @@ $(document).ready(function () {
         document.getElementById("carousel-indicators").innerHTML += `
                   <li data-target="#quote-carousel" data-slide-to="${i}" class="${isActive(
           i
-        )}" title="${checkName(nous.name)}">
+        )}">
                     <img src="${checkImage(nous.image)}" alt="">
                   </li>`;
     
