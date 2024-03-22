@@ -1,8 +1,12 @@
 $(document).ready(function () {
   toastr.options.rtl = true;
   toastr.options.positionClass = "toast-bottom-center";
+  toastr.options.timeOut = 0;
+  toastr.options.extendedTimeOut = 0;
+  toastr.info("مهلت ارسال آرزو به اتمام رسیده است");
   $("form#form").submit(function (e) {
     e.preventDefault();
+    return;
     var formData = new FormData($(this)[0]);
     if (!$("input#image")[0].files?.length) {
       formData.delete("image");

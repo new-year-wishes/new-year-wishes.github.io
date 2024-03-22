@@ -23,23 +23,23 @@
       <h2>افزودن آرزو</h2>
       <form id="form">
         <div class="user-box">
-          <input type="text" name="name" id="name" required="" />
+          <input type="text" name="name" id="name" required="" readonly />
           <label>نام</label>
         </div>
         <div class="user-box">
-          <input type="text" name="code" id="code" required="" />
+          <input type="text" name="code" id="code" required="" readonly />
           <label>شماره دانشجویی</label>
         </div>
 
         <div class="user-box">
-          <textarea name="message" id="message" rows="7" required></textarea>
+          <textarea name="message" id="message" rows="7" required readonly></textarea>
           <label>پیام</label>
         </div>
         <div class="user-box" style="margin-top: 20px">
-          <input type="file" name="image" id="image" />
+          <input type="file" name="image" id="image" readonly />
           <label class="lbl">عکس (اختیاری)</label>
         </div>
-        <button type="submit">
+        <button type="submit" disabled>
           <span></span>
           <span></span>
           <span></span>
